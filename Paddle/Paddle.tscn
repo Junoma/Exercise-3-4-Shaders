@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://d3o7nr1d2l1p"]
+[gd_scene load_steps=10 format=3 uid="uid://d3o7nr1d2l1p"]
 
 [ext_resource type="Script" path="res://Paddle/Paddle.gd" id="1"]
-[ext_resource type="Texture2D" uid="uid://b2ucjwjpnp6ce" path="res://Assets/paddleRed.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://d3djotthk3c5k" path="res://Assets/paddleBlu.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://e0e7iyb5ekfj" path="res://Assets/confetti.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ct1m5igdvci7w" path="res://Assets/paddleRed.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dqresinv27u1u" path="res://Assets/paddleBlu.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://do34wrc6iw1uc" path="res://Assets/confetti.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://ejtjabmdbujg" path="res://Assets/eye.png" id="5_6hku5"]
+[ext_resource type="Texture2D" uid="uid://dgige0blowv8a" path="res://Assets/New Piskel.png" id="6_wmqnu"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(50, 10)
@@ -46,3 +48,23 @@ texture = ExtResource("2")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(50, 10)
 texture = ExtResource("3")
+
+[node name="Eye" type="Sprite2D" parent="."]
+position = Vector2(27, -1)
+scale = Vector2(0.994312, 0.757868)
+texture = ExtResource("5_6hku5")
+
+[node name="Pupil" type="Node2D" parent="Eye"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Eye/Pupil"]
+texture = ExtResource("6_wmqnu")
+
+[node name="Eye2" type="Sprite2D" parent="."]
+position = Vector2(73, -1)
+scale = Vector2(0.994312, 0.757868)
+texture = ExtResource("5_6hku5")
+
+[node name="Pupil" type="Node2D" parent="Eye2"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Eye2/Pupil"]
+texture = ExtResource("6_wmqnu")
